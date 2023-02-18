@@ -1,0 +1,50 @@
+@import "layout.scss";
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-grow: 1;
+
+    
+
+    & > div{
+        margin: 12px;
+        padding: 5px;
+        font-family: nth($myFont , $style_selector);
+        border-radius: nth($myBorderRadius , $style_selector);
+    }
+
+    .base{
+        background-color: nth($myColor , $style_selector);
+        
+    }
+
+    .important{
+        $color: nth($myColor , $style_selector);
+        background-color: darken($color, 30);
+    }
+
+    .warning{
+        $color: nth($myColor , $style_selector);
+        background-color: lighten($color, 30);
+    }
+
+    .font{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .secondary_font{
+        font-family: nth($mySecondaryFont , $style_selector);
+        }
+    }
+
+    .box_shadow{
+        border: 2px solid black;
+        box-shadow: nth($myShadowBox , $style_selector);
+    }
+}
